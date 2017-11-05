@@ -53,4 +53,18 @@ public class CardScript : MonoBehaviour {
 		get { return _initialized; }
 		set { _initialized = value; }
 	}
+
+	public void falseCheck(){
+		StartCoroutine (pause ());
+	}
+
+	IEnumerator pause(){
+		yield return new WaitForSeconds (1);
+		if (_state == 0)
+			GetComponent<Image> ().sprite = _cardBack;
+		else if (_state == 1)
+			GetComponent<Image> ().sprite = _cardFace;
+		DO_NOT = false;
+	}
+			
 }
