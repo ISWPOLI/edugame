@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
 	public Text matchText;
 
 	private bool _init = false;
+	bool aux = false;
 	private int _matches = 13;
 
 
@@ -28,15 +29,16 @@ public class GameManager : MonoBehaviour {
 
 	void initializeCards(){
 		for (int id = 0; id < 2; id++) {
-			for (int i = 1; i < 14; i++) {
-
+			for (int i = 1; i < 13; i++) {
+				bool aux = false;
 				bool test = false;
 				int choice = 0; 
 				while (!test) {
 					choice = Random.Range (0, cards.Length);
+					aux = cards [choice].GetComponent<CardScript> ().initialized;
 					test = !(cards [choice].GetComponent<CardScript> ().initialized);
 				}
-				cards [choice].GetComponent<CardScript> ().cardValue = 1;
+				cards [choice].GetComponent<CardScript> ().cardValue = i;
 				cards [choice].GetComponent<CardScript> ().initialized = true;
 			}
 		}
