@@ -9,7 +9,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour {
 
 	public Sprite[] cardFace;
-	public Sprite[] cardBack;
+	public Sprite cardBack;
 	public GameObject[] cards;
 	public Text matchText;
 
@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour {
 	public Sprite getCardBack(){
 			return cardBack;
 		}
+
 	public Sprite getCardFace(int i){
 		return cardFace [i - 1];
 	}
@@ -57,8 +58,8 @@ public class GameManager : MonoBehaviour {
 	void checkCards(){
 		List<int> list = new List<int> ();
 		for (int i = 0; i < cards.Length; i++) {
-			if(cards[i].GetComponent<CardScript>().state == 1)
-				list.Add [i];
+			if(cards[i].GetComponent<CardScript> ().state == 1)
+				list.Add(i);
 		}
 			if (list.Count == 2)
 				cardComparision (list);
@@ -72,7 +73,7 @@ public class GameManager : MonoBehaviour {
 		if(cards[list[0]].GetComponent<CardScript> ().cardValue == cards[list[1]].GetComponent<CardScript>().cardValue){
 			x = 2;
 			_matches--;
-			matchText = "Number of Matches: " + _matches;
+			matchText.text = "Number of Matches: " + _matches;
 			if (_matches == 0)
 				SceneManager.LoadScene ("Menu");
 		}

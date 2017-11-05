@@ -18,16 +18,16 @@ public class CardScript : MonoBehaviour {
 
 	private GameObject _manager;
 
-	void start(){
+	void Start(){
 		_state = 0;
-		_manager = GameObject.FindGameObjectsWithTag ("Manager");
+		_manager = GameObject.FindGameObjectWithTag ("Manager");
 
 
 	}
 
 	public void setUpGraphics(){
 		_cardBack = _manager.GetComponent<GameManager> ().getCardBack ();
-		_cardFace = _manager.GetComponent<GameManager> ().getCardBack (_cardValue);
+		_cardFace = _manager.GetComponent<GameManager> ().getCardFace (_cardValue);
 
 		flipCard ();
 	}
