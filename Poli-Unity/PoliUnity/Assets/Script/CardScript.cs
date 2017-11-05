@@ -18,7 +18,7 @@ public class CardScript : MonoBehaviour {
 
 	private GameObject _manager;
 
-	void Start(){
+	void start(){
 		_state = 0;
 		_manager = GameObject.FindGameObjectWithTag ("Manager");
 
@@ -32,7 +32,7 @@ public class CardScript : MonoBehaviour {
 		flipCard ();
 	}
 
-	void flipCard(){
+	public void flipCard(){
 		if (_state == 0 && !DO_NOT)
 			GetComponent<Image> ().sprite = _cardBack;
 		else if (_state == 1 && !DO_NOT)
