@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 
 	private bool _init = false;
 	bool aux = false;
-	private int _matches = 13;
+	private int _matches = 6;
 
 
 	// Update is called once per frame
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
 
 	void initializeCards(){
 		for (int id = 0; id < 2; id++) {
-			for (int i = 1; i < 13; i++) {
+			for (int i = 1; i < 6; i++) {
 				bool aux = false;
 				bool test = false;
 				int choice = 0; 
