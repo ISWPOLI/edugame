@@ -22,14 +22,17 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		if (!_init)
 			initializeCards ();
+		if (Input.touchCount > 0) {
+			if (Input.GetTouch(0).phase==TouchPhase.Began)
+				checkCards();
+		}
 		if (Input.GetMouseButtonUp (0))
 			checkCards();
-		
 	}
 
 	void initializeCards(){
 		for (int id = 0; id < 2; id++) {
-			for (int i = 1; i < 6; i++) {
+			for (int i = 1; i <= 6; i++) {
 				bool aux = false;
 				bool test = false;
 				int choice = 0; 
