@@ -8,13 +8,19 @@ public class HighScore : MonoBehaviour {
 
 	// Use this for initialization
 	public Text highScore;
+	public Text bonus;
 
 	void Start () {
 		highScore.text = PlayerPrefs.GetInt("Score").ToString();
+		bonus.text = PlayerPrefs.GetString("Bonus");
 	}
 
-	void menu(){
+	public void menu(){
 		SceneManager.LoadScene("Menu");
+	}
+
+	public void reset(){
+		PlayerPrefs.DeleteKey ("Score");
 	}
 
 }

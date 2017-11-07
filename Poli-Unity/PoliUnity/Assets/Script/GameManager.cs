@@ -14,18 +14,26 @@ public class GameManager : MonoBehaviour {
 	public Text matchText;
 	public Text highScore;
 	public Text lives;
-	public int score;
+	private int score = 0;
+	private bool beingHandled = false;
 
 	private bool _init = false;
 	bool aux = false;
 	private int _matches = 6;
 	void Start(){
-		score = 0;
+
 	}
 
 
 	// Update is called once per frame
 	void Update () {
+		if (!beingHandled) {
+			StartCoroutine (WaitforIt ());
+			score = score + 1;
+		}
+			
+		highScore.text = " "+score;
+
 		if (!_init)
 			initializeCards ();
 		if (Input.touchCount > 0) {
@@ -35,9 +43,14 @@ public class GameManager : MonoBehaviour {
 		if (Input.GetMouseButtonUp (0))
 			checkCards();
 
-		score += (int)Time.deltaTime;
-		highScore.text = " "+score;
 
+
+	}
+
+	private IEnumerator WaitforIt(){
+		beingHandled = true;
+		yield return new WaitForSeconds (3.0f);
+		beingHandled = false;
 	}
 
 	void initializeCards(){
@@ -90,9 +103,12 @@ public class GameManager : MonoBehaviour {
 			_matches--;
 			matchText.text = "Number of Matches: " + _matches;
 			score += 250;
-			if (_matches == 0)
-				PlayerPrefs.SetInt ("Score", score);
+			if (_matches == 0) {
+				if (score > PlayerPrefs.GetInt ("Score")) {
+					PlayerPrefs.SetInt ("Score", score);
+				}
 				SceneManager.LoadScene ("BonusRound");
+			}
 		}
 			for (int i = 0; i < list.Count; i++) {
 				cards [list [i]].GetComponent<CardScript> ().state = x;
