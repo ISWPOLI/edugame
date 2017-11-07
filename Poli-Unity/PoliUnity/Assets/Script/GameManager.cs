@@ -12,10 +12,16 @@ public class GameManager : MonoBehaviour {
 	public Sprite cardBack;
 	public GameObject[] cards;
 	public Text matchText;
+	public Text highScore;
+	public Text lives;
+	public int score;
 
 	private bool _init = false;
 	bool aux = false;
 	private int _matches = 6;
+	void Start(){
+		score = 0;
+	}
 
 
 	// Update is called once per frame
@@ -28,6 +34,10 @@ public class GameManager : MonoBehaviour {
 		}
 		if (Input.GetMouseButtonUp (0))
 			checkCards();
+
+		score += (int)Time.deltaTime;
+		highScore.text = " "+score;
+
 	}
 
 	void initializeCards(){
@@ -79,8 +89,10 @@ public class GameManager : MonoBehaviour {
 			x = 2;
 			_matches--;
 			matchText.text = "Number of Matches: " + _matches;
+			score += 250;
 			if (_matches == 0)
-				SceneManager.LoadScene ("Menu");
+				PlayerPrefs.SetInt ("Score", score);
+				SceneManager.LoadScene ("BonusRound");
 		}
 			for (int i = 0; i < list.Count; i++) {
 				cards [list [i]].GetComponent<CardScript> ().state = x;
