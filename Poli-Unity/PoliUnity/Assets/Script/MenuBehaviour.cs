@@ -12,7 +12,7 @@ public class MenuBehaviour : MonoBehaviour {
             SceneManager.LoadScene("PlayScene");
         break;
         case(2):
-             SceneManager.LoadScene("Puntuaciones");
+             SceneManager.LoadScene("GameOver");
         break;
         case(0):
             Application.Quit ();
