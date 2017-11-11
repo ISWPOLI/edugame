@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorButtonNormal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageButton
+            android:id="@+id/bttHome"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.20"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+        <TextView
+            android:id="@+id/usuario"
+            android:layout_width="27dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.36"
+            android:background="@color/colorPrimary"
+            android:text="Usuario:" />
+
+        <TextView
+            android:id="@+id/puntaje"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.28"
+            android:background="@color/colorPrimary"
+            android:text="Puntaje" />
+
+        <ImageButton
+            android:id="@+id/bttCerrar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.16"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="508dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="37dp">
+
+        <RelativeLayout
+            android:layout_width="236dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/background_light"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="46dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text="Actividades"
+                android:textColor="@android:color/background_dark"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                android:textColorLink="@android:color/holo_blue_dark"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/nivel1"
+                android:layout_width="65dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="42dp"
+                android:background="@drawable/ima1"
+                android:text="Nivel 1"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="74dp"
+                tools:layout_editor_absoluteY="112dp"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/nivel2"
+                android:layout_width="65dp"
+                android:layout_height="49dp"
+                android:layout_below="@+id/nivel1"
+                android:layout_marginTop="27dp"
+                android:layout_toStartOf="@+id/nivel1"
+                android:background="@drawable/ima1"
+                android:text="Nivel 2"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="39dp"
+                tools:layout_editor_absoluteY="189dp" />
+
+            <Button
+                android:id="@+id/nivel5"
+                android:layout_width="65dp"
+                android:layout_height="49dp"
+                android:layout_alignStart="@+id/nivel6"
+                android:layout_alignTop="@+id/nivel5"
+                android:background="@android:color/holo_blue_light"
+                android:text="Nivel 3"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="39dp"
+                tools:layout_editor_absoluteY="189dp" />
+
+            <Button
+                android:id="@+id/nivel4"
+                android:layout_width="65dp"
+                android:layout_height="49dp"
+                android:layout_alignBottom="@+id/nivel2"
+                android:layout_toEndOf="@+id/nivel1"
+                android:background="@android:color/holo_blue_light"
+                android:text="Nivel 4"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="133dp"
+                tools:layout_editor_absoluteY="189dp" />
+
+            <Button
+                android:id="@+id/nivel5"
+                android:layout_width="65dp"
+                android:layout_height="49dp"
+                android:layout_above="@+id/nivel7"
+                android:layout_alignStart="@+id/nivel4"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/ima1"
+                android:text="Nivel 5"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="133dp"
+                tools:layout_editor_absoluteY="189dp" />
+
+            <Button
+                android:id="@+id/nivel6"
+                android:layout_width="65dp"
+                android:layout_height="49dp"
+                android:layout_alignBottom="@+id/nivel7"
+                android:layout_alignStart="@+id/nivel2"
+                android:background="@drawable/ima1"
+                android:text="Nivel 6"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="39dp"
+                tools:layout_editor_absoluteY="272dp" />
+
+            <Button
+                android:id="@+id/nivel7"
+                android:layout_width="65dp"
+                android:layout_height="49dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/nivel5"
+                android:layout_marginBottom="85dp"
+                android:background="@android:color/holo_blue_light"
+                android:text="Nivel 7"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="133dp"
+                tools:layout_editor_absoluteY="272dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="196dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="0.80"
+                    android:background="@android:color/background_light"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:layout_editor_absoluteY="226dp">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cursos"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentStart="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="213dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="13dp"
+                    android:background="@android:color/background_light"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:layout_editor_absoluteY="46dp">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="Metas" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView4"
+                        android:background="@android:color/holo_blue_light"
+                        app:srcCompat="@mipmap/ic_launcher_round"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
