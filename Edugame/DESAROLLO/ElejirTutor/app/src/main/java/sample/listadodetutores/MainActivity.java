@@ -23,30 +23,31 @@ public class MainActivity extends AppCompatActivity {
         ListView mListView = (ListView) findViewById(R.id.listView);
 
         //Create the Person objects
-        Person p1 = new Person("ASHA, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p2 = new Person("MARLON, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p3 = new Person("MAURICIO, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p4 = new Person("SANDRA, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p5 = new Person("ALEJANDRA, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p6 = new Person("ERIKA, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p7 = new Person("NINA, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p8 = new Person("CARLOS, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p9 = new Person("JEISSON, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p10 = new Person("MYRIAM, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p11 = new Person("LAIKA, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p12 = new Person("BECKY, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p13 = new Person("JACK, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p14 = new Person("TONY, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p15 = new Person("MELISSA, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p16 = new Person("RICHARD, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p17 = new Person("CINDY, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p18 = new Person("BECKY, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p19 = new Person("DUSTIN, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p20 = new Person("RON, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p21 = new Person("ROB, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p22 = new Person("BOBBIE, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
-        Person p23 = new Person("SACK, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología");
-        Person p24 = new Person("PAO, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental");
+        Person p1 = new Person("ASHA, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "ashatumb");
+        Person p2 = new Person("MARLON, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "marlontumb");
+        Person p3 = new Person("MAURICIO, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "mauriciotumb");
+        Person p4 = new Person("SANDRA, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "sandratumb");
+        Person p5 = new Person("ALEJANDRA, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "ashatumb");
+        Person p6 = new Person("ERIKA, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "sandratumb");
+        Person p7 = new Person("NINA, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "sandratumb");
+        Person p8 = new Person("CARLOS, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "mauriciotumb");
+        Person p9 = new Person("JEISSON, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "jeissontumb");
+        Person p10 = new Person("MYRIAM, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "ashatumb");
+        Person p11 = new Person("LAIKA, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "sandratumb");
+        Person p12 = new Person("BECKY, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "ashatumb");
+        Person p13 = new Person("JACK, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "marlontumb");
+        Person p14 = new Person("TONY, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "mauriciotumb");
+        Person p15 = new Person("MELISSA, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "sandratumb");
+        Person p16 = new Person("RICHARD, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "marlontumb");
+        Person p17 = new Person("CINDY, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "sandratumb");
+        Person p18 = new Person("BECKY, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "ashatumb");
+        Person p19 = new Person("DUSTIN, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "jeissontumb");
+        Person p20 = new Person("RON, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "marlontumb");
+        Person p21 = new Person("ROB, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "jeissontumb");
+        Person p22 = new Person("BOBBIE, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "marlontumb");
+        Person p23 = new Person("SACK, 30","COSTO POR HORA $20","SAN DIEGO, CALIFORNIA", "Tutor para Ecología", "jeissontumb");
+        Person p24 = new Person("PAO, 35","COSTO POR HORA $27","LOS ÁNGELES, CALIFORNIA", "Tutor para Cul. Ambiental", "sandratumb");
+
 
 
         //Add the Person objects to an ArrayList
@@ -79,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         PersonListAdapter adapter = new PersonListAdapter(this, R.layout.adapter_view_layout, peopleList);
         mListView.setAdapter(adapter);
     }
@@ -87,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
           Intent i = new Intent(MainActivity.this, TutorDetails.class);
           startActivity(i);
       }
+
 
 
 
