@@ -14,7 +14,7 @@
         android:layout_height="120dp"
         android:layout_weight="33.3"
         android:padding="10dp"
-        app:srcCompat="@drawable/foto1tumb" />
+        app:srcCompat="@drawable/ashatumb" />
 
     <LinearLayout
         android:layout_width="match_parent"

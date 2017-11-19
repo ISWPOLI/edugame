@@ -89,7 +89,7 @@
             android:gravity="left|center"
             android:paddingBottom="5dp"
             android:paddingTop="5dp"
-            android:text="CostoXhora"
+            android:text="Costo por hora $20"
             android:textColor="@android:color/black" />
 
 
