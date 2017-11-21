@@ -5,12 +5,14 @@ public class Person {
     private String priceHour;
     private String ciudad;
     private String tutoria;
+    private String imageF;
 
-    public Person(String name, String priceHour, String ciudad, String tutoria) {
+    public Person(String name, String priceHour, String ciudad, String tutoria, String imageF) {
         this.priceHour = priceHour;
         this.name = name;
         this.ciudad = ciudad;
         this.tutoria = tutoria;
+        this.imageF = imageF;
     }
 
     public String getPriceHour() {
@@ -43,5 +45,13 @@ public class Person {
 
     public void setTutoria(String tutoria) {
         this.tutoria = tutoria;
+    }
+
+    public String getImageF() {
+        return imageF;
+    }
+
+    public void setImageF(String imageF) {
+        this.tutoria = imageF;
     }
 }

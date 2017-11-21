@@ -1,6 +1,7 @@
 package sample.listadodetutores;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,6 +31,7 @@ public class PersonListAdapter extends ArrayAdapter<Person> {
         TextView priceHour;
         TextView ciudad;
         TextView tutoria;
+        ImageView imageF;
     }
 
 
@@ -46,9 +49,10 @@ public class PersonListAdapter extends ArrayAdapter<Person> {
         String priceHour = getItem(position).getPriceHour();
         String ciudad = getItem(position).getCiudad();
         String tutoria = getItem(position).getTutoria();
+        String imageF = getItem(position).getImageF();
 
         //Create the person object with the information
-        Person person = new Person(name,priceHour,ciudad,tutoria);
+        Person person = new Person(name,priceHour,ciudad,tutoria,imageF);
 
         //create the view result for showing the animation
         final View result;
@@ -65,6 +69,7 @@ public class PersonListAdapter extends ArrayAdapter<Person> {
             holder.priceHour = (TextView) convertView.findViewById(R.id.textView2);
             holder.ciudad = (TextView) convertView.findViewById(R.id.textView3);
             holder.tutoria = (TextView) convertView.findViewById(R.id.textView4);
+            holder.imageF = (ImageView) convertView.findViewById(R.id.imageView8);
 
             result = convertView;
 
@@ -85,9 +90,15 @@ public class PersonListAdapter extends ArrayAdapter<Person> {
         holder.priceHour.setText(person.getPriceHour());
         holder.ciudad.setText(person.getCiudad());
         holder.tutoria.setText(person.getTutoria());
+        holder.imageF.setImageResource(getImageId(mContext, person.getImageF()));
 
 
         return convertView;
+    }
+
+    // Devuelve el ID en entero del nombre de la imagen
+    public static int getImageId(Context context, String imageName) {
+        return context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName());
     }
 }
 
